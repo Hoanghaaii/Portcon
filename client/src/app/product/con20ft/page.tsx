@@ -48,10 +48,19 @@ const products = [
   },
 ];
 
-const Page = () => {
+// Định nghĩa kiểu cho sản phẩm
+type Product = {
+  id: number;
+  name: string;
+  price: string;
+  imageUrls: string[];
+  inStock: boolean;
+};
+
+const Page: React.FC = () => {
   const router = useRouter();
 
-  const handleCardClick = (product) => {
+  const handleCardClick = (product: Product) => { // Định nghĩa kiểu cho product
     // Chuyển hướng đến trang chi tiết với dữ liệu sản phẩm
     const imageUrlQuery = product.imageUrls.map(url => encodeURIComponent(url)).join('&imageUrl='); // Nối các URL
     router.push(`/product/${product.id}?name=${encodeURIComponent(product.name)}&price=${encodeURIComponent(product.price)}&imageUrl=${encodeURIComponent(product.imageUrls[0])}&inStock=${product.inStock}&imageUrl=${imageUrlQuery}`);
