@@ -1,9 +1,16 @@
 "use client";
 import React from 'react';
 import { useRouter } from 'next/navigation';
-
+import Image from 'next/image';
+type Product = {
+  id: number;
+  name: string;
+  price: string;  // Đổi thành string để khớp với dữ liệu sản phẩm
+  imageUrl: string;
+  inStock: boolean;
+};
 // Dữ liệu sản phẩm mẫu
-const products = [
+const products: Product[] = [
   {
     id: 7,
     name: 'Sản phẩm 1',
@@ -51,7 +58,7 @@ const products = [
 const Page = () => {
   const router = useRouter();
 
-  const handleCardClick = (product) => {
+  const handleCardClick = (product: Product) => {
     // Chuyển hướng đến trang chi tiết với dữ liệu sản phẩm
     router.push(`/product/${product.id}?name=${encodeURIComponent(product.name)}&price=${encodeURIComponent(product.price)}&imageUrl=${encodeURIComponent(product.imageUrl)}&inStock=${product.inStock}`);
   };
@@ -67,7 +74,7 @@ const Page = () => {
             className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer"
             onClick={() => handleCardClick(product)} // Gọi hàm khi click vào card
           >
-            <img
+            <Image
               src={product.imageUrl}
               alt={product.name}
               className="w-full h-48 object-cover"

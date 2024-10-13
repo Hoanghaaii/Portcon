@@ -17,21 +17,25 @@ import {
 } from "./form"
 import { Input } from "./input"
 
+// Định nghĩa schema cho form
 const formSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
   }),
-})
+});
+
+// Định nghĩa kiểu cho dữ liệu biểu mẫu dựa trên schema
+type FormData = z.infer<typeof formSchema>;
 
 export function ProfileForm() {
-  const form = useForm({
+  const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: FormData) => { // Định nghĩa kiểu cho data
     console.log(data);
   };
 
@@ -57,5 +61,5 @@ export function ProfileForm() {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
-  )
+  );
 }

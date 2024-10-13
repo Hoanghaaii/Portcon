@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from 'next/image';
 import React, { useState } from 'react';
 
@@ -27,9 +27,9 @@ const Timeline = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(null); // Lưu trữ chỉ số của mốc thời gian được chọn
+  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Lưu trữ chỉ số của mốc thời gian được chọn
 
-  const handleClick = (index) => {
+  const handleClick = (index: number) => { // Định nghĩa kiểu cho index
     setActiveIndex(index === activeIndex ? null : index); // Đóng nếu nhấp vào cùng một mốc
   };
 
@@ -46,7 +46,7 @@ const Timeline = () => {
               className={`flex justify-center items-center w-12 h-12 rounded-full cursor-pointer ${
                 activeIndex === index ? 'bg-blue-700 text-white' : 'bg-gray-300 text-black'
               }`}
-              onClick={() => handleClick(index)}
+              onClick={() => handleClick(index)} // Sử dụng hàm handleClick với index
             >
               {event.time}
             </div>

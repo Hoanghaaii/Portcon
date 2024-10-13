@@ -2,8 +2,6 @@ import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "./dropdown-menu";
 import { FaCaretDown } from "react-icons/fa";
@@ -12,7 +10,7 @@ import React, { useState } from 'react';
 const DropDownPicker = () => {
     const [selectedOption, setSelectedOption] = useState("Chọn thời gian thuê");
 
-    const handleSelect = (option) => {
+    const handleSelect = (option: string) => {
         setSelectedOption(option);
     };
 

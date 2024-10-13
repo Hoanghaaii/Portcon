@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import {
@@ -10,7 +9,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../../../components/ui/carousel";
-import { Checkbox } from "../../../components/ui/checkbox"
 import{ DatePicker} from "../../../components/ui/datepicker"
 import DropDownPicker from '../../../components/ui/ddpicker';
 import { Button } from '../../../components/ui/button';
@@ -21,7 +19,6 @@ interface ProductDetailProps {
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
-  const router = useRouter();
   const searchParams = useSearchParams();
 
   const id = params.id;
