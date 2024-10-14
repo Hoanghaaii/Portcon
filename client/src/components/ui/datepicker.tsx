@@ -27,8 +27,8 @@ export function DatePicker() {
             !date && "text-muted-foreground"
           )}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, "PPP") : <span>Chọn ngày bắt đầu</span>}
+          <CalendarIcon className="mr-2 h-4 w-4 text-blue-900" />
+          {date ? format(date, "PPP") : <span className=" text-blue-900">Chọn ngày bắt đầu</span>}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">

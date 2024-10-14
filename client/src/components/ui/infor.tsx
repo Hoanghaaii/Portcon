@@ -20,9 +20,9 @@ const Infor: React.FC<InforProps> = ({ src, fallbackText, name, role, descriptio
             </Avatar>
         </div>
         <div className="flex flex-col">
-            <h2 className="text-xl font-medium ">{name}</h2> {/* Hiển thị tên */}
-            <p className="text-sm text-gray-500">{role}</p>      {/* Hiển thị vai trò */}
-            <p className="text-sm text-gray-700">{description}</p> {/* Hiển thị mô tả */}
+            <h2 className="text-2xl font-semibold  text-blue-900">{name}</h2> {/* Hiển thị tên */}
+            <p className="text-lg  text-blue-900">{role}</p>      {/* Hiển thị vai trò */}
+            <p className="text-sm text-blue-900">{description}</p> {/* Hiển thị mô tả */}
         </div>
     </div>
   )
