@@ -49,7 +49,7 @@ const Form: React.FC = () => {
     };
 
     // Gửi email
-    emailjs.send('service_jhcvvoh', 'template_p44vce4', templateParams, '7V-rHdEZQr8ZKiBIo')
+    emailjs.send('service_un0kykl', 'template_pl8po24', templateParams, 'E3_CEEU85HkX2f1Z_')
       .then((response) => {
         console.log('Email sent successfully!', response.status, response.text);
         alert('Thông tin đã được gửi thành công!');
