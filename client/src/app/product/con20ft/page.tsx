@@ -9,7 +9,7 @@ const products = [
     id: 1,
     name: 'Sản phẩm 1',
     price: '100.000 VNĐ',
-    imageUrls: ['/1.jpg', '/11.jpg', '/111.jpg', '/1111.jpg'], // Mảng chứa nhiều ảnh
+    imageUrls: ['/1111.jpg', '/11.jpg', '/111.jpg', '/1111.jpg'], // Mảng chứa nhiều ảnh
     inStock: true,
   },
   {
@@ -61,10 +61,9 @@ type Product = {
 const Page: React.FC = () => {
   const router = useRouter();
 
-  const handleCardClick = (product: Product) => { // Định nghĩa kiểu cho product
-    // Chuyển hướng đến trang chi tiết với dữ liệu sản phẩm
-    const imageUrlQuery = product.imageUrls.map(url => encodeURIComponent(url)).join('&imageUrl='); // Nối các URL
-    router.push(`/product/${product.id}?name=${encodeURIComponent(product.name)}&price=${encodeURIComponent(product.price)}&imageUrl=${encodeURIComponent(product.imageUrls[0])}&inStock=${product.inStock}&imageUrl=${imageUrlQuery}`);
+  const handleCardClick = (productId: number) => { 
+    // Chuyển hướng đến trang chi tiết dựa trên `id` của sản phẩm
+    router.push(`/product/${productId}`);
   };
   
   return (
@@ -75,7 +74,7 @@ const Page: React.FC = () => {
           <div
             key={product.id}
             className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition duration-200"
-            onClick={() => handleCardClick(product)} // Gọi hàm khi click vào card
+            onClick={() => handleCardClick(product.id)} // Chỉ truyền id
           >
             <Image
               width={100}
@@ -86,7 +85,6 @@ const Page: React.FC = () => {
             />
             <div className="p-4">
               <h2 className="text-xl font-bold text-blue-900">{product.name}</h2>
-              <p className="text-blue-900 text-opacity-65">{product.price}</p>
               <p className={`mt-2 ${product.inStock ? 'text-green-600' : 'text-red-600'}`}>
                 {product.inStock ? 'Còn hàng' : 'Hết hàng'}
               </p>

@@ -36,7 +36,7 @@ const Timeline = () => {
   return (
     <div className="relative w-full py-10">
       {/* Line */}
-      <div className="absolute top-1/2 left-0 right-0 h-1 bg-blue-600"></div>
+      <div className="absolute top-1/2 left-0 right-0 h-1 bg-blue-900"></div>
 
       <div className="grid grid-cols-4 gap-4">
         {events.map((event, index) => (
@@ -44,7 +44,7 @@ const Timeline = () => {
             {/* Nút thời gian */}
             <div
               className={`flex justify-center items-center w-12 h-12 rounded-full cursor-pointer ${
-                activeIndex === index ? 'bg-blue-700 text-white' : 'bg-gray-300 text-black'
+                activeIndex === index ? 'bg-blue-900 text-white' : 'bg-gray-300 text-blue-900'
               }`}
               onClick={() => handleClick(index)} // Sử dụng hàm handleClick với index
             >
@@ -54,7 +54,7 @@ const Timeline = () => {
             {/* Hiển thị thông tin sự kiện nếu được chọn */}
             {activeIndex === index && (
               <div className="absolute top-16 left-1/2 transform -translate-x-1/2 p-6 bg-white shadow-lg rounded-lg w-96">
-                <p className="mb-2 text-lg font-semibold text-blue-600">{event.description}</p>
+                <p className="mb-2 text-lg font-semibold text-blue-900">{event.description}</p>
                 {/* Hiển thị ảnh */}
                 <Image 
                   width={300} 

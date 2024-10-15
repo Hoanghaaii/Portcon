@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Timeline from '../../../components/ui/timeline';
-import Cardpage from '../../../components/ui/cardpage';
 
 const Company = () => {
   return (
@@ -9,17 +7,14 @@ const Company = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <section className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-4">Sứ mệnh</h1>
-          <p className="text-lg text-gray-600">Cung cấp các giải pháp sáng tạo và chất lượng hàng đầu.</p>
+          <h1 className="text-4xl font-bold mb-4 text-blue-900">SỨ MỆNH</h1>
         </section>
 
         {/* About Section */}
         <section className="mb-20 ">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6"><u className=''>Giới Thiệu Công Ty</u></h2>
-          <p className="text-gray-600 leading-relaxed my-5">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
+          <p className="text-blue-900 leading-relaxed my-5 font-semibold text-xl">
+           Portcon cam kết mang đến giải pháp bảo quản thực phẩm tối ưu, đảm bảo chất lượng và an toàn vệ sinh thực phẩm, góp phần nâng cao giá trị sản phẩm và dịch vụ của khách hàng.
+
           </p>
           <div className=' w-full h-50'>
             <Image
@@ -31,14 +26,11 @@ const Company = () => {
             </Image>
           </div>
         </section>
-        <section className=" mb-48 ">
-          <h2 className="text-3xl font-semibold text-gray-800"><u className=''>Lịch sử công ty</u></h2>
-          <p className="text-gray-600 leading-relaxed my-5">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
+        <section className="mb-20 ">
+          <p className="text-blue-900 leading-relaxed my-5 font-semibold text-xl">
+            Chúng tôi hướng tới một tương lai bền vững, nơi mà thực phẩm luôn được bảo quản tốt nhất, giảm thiểu lãng phí và bảo vệ môi trường. Portcon cam kết đóng góp tích cực vào sự phát triển của ngành công nghiệp thực phẩm Việt Nam.
           </p>
-          <div className=' w-full mb-12'>
+          <div className=' w-full h-50'>
             <Image
               src="/pageImg.jpg"
               alt="Company Logo"
@@ -46,23 +38,6 @@ const Company = () => {
               height={10000}
               >
             </Image>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="text-center text-md font-semibold">Các mốc thời gian của công ty (Bấm vào các mốc thời gian để xem chi tiết)</p>
-            <Timeline />
-          </div>
-        </section>
-        <section className=" ">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6"><u className=''>Thành tựu</u></h2>
-          <p className="text-gray-600 leading-relaxed my-5">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
-          </p>
-          <div className='flex justify-center'>
-          <Cardpage src='' name='Giải nhà bán lẻ của năm' description=''/>
-          <Cardpage src='' name='Giải công ty startup của năm' description=''/>
-          <Cardpage src='' name='Giải Cánh diều vàng' description=''/>
           </div>
         </section>
       </div>

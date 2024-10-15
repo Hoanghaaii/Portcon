@@ -1,73 +1,79 @@
-import React from 'react';
 import Image from 'next/image';
-import Timeline from '../../../components/ui/timeline';
-import Cardpage from '../../../components/ui/cardpage';
+import React from 'react';
 
-const Company = () => {
+const ContainerBenefits = () => {
   return (
-    <div className="bg-gray-50 py-10">
-      <div className="container mx-auto px-4">
-        {/* Header Section */}
-        <section className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-4">Đây là giới thiệu nhưung cứ coi đây là tin tức đi đổ data sau XD</h1>
-          <p className="text-lg text-gray-600">Cung cấp các giải pháp sáng tạo và chất lượng hàng đầu.</p>
-        </section>
+    <div className="container mx-auto p-5 space-y-5">
+      <h1 className="text-blue-900 font-semibold text-4xl flex justify-center my-5">LỢI ÍCH KHI SỬ DỤNG CONTAINER LÀM KHO</h1>
+      <Image src={'/new3.jpg'} alt='new' width={10000} height={10000}></Image>
+      <p className="text-blue-900">
+        Hiện nay, nhu cầu sử dụng container làm kho chứa hàng hóa (container kho) đang tăng cao do những tiện ích mà nó đem lại. Câu hỏi đặt ra bây giờ là “Container kho là gì?”; “Những lợi ích của việc sử dụng container kho là gì?” Tuệ Lâm Container sẽ giải đáp mọi thắc mắc của bạn trong bài viết này!
+      </p>
 
-        {/* About Section */}
-        <section className="mb-20 ">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6"><u className=''>Giới Thiệu Công Ty</u></h2>
-          <p className="text-gray-600 leading-relaxed my-5">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
-          </p>
-          <div className=' w-full h-50'>
-            <Image
-              src="/pageImg.jpg"
-              alt="Company Logo"
-              width={10000}
-              height={10000}
-              >
-            </Image>
-          </div>
-        </section>
-        <section className=" mb-48 ">
-          <h2 className="text-3xl font-semibold text-gray-800"><u className=''>Lịch sử công ty</u></h2>
-          <p className="text-gray-600 leading-relaxed my-5">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
-          </p>
-          <div className=' w-full mb-12'>
-            <Image
-              src="/pageImg.jpg"
-              alt="Company Logo"
-              width={10000}
-              height={10000}
-              >
-            </Image>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="text-center text-md font-semibold">Các mốc thời gian của công ty (Bấm vào các mốc thời gian để xem chi tiết)</p>
-            <Timeline />
-          </div>
-        </section>
-        <section className=" ">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6"><u className=''>Thành tựu</u></h2>
-          <p className="text-gray-600 leading-relaxed my-5">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
-          </p>
-          <div className='flex justify-center'>
-          <Cardpage src='' name='Giải nhà bán lẻ của năm' description=''/>
-          <Cardpage src='' name='Giải công ty startup của năm' description=''/>
-          <Cardpage src='' name='Giải Cánh diều vàng' description=''/>
-          </div>
-        </section>
-      </div>
+      <h2 className="text-blue-900 font-semibold text-3xl my-4">Container kho là gì?</h2>
+      <p className="text-blue-900">
+        Container kho (hay còn gọi là container khô hay dry container) là một thùng chứa hàng hóa có kết cấu bằng khung thép bền vững và có thể sử dụng nhiều lần. Container kho thường được sử dụng trong vận chuyển đường biển, đường bộ và được ứng dụng để làm kho lưu trữ hàng hóa.
+      </p>
+      <p className="text-blue-900">
+        Sử dụng container làm kho chứa hàng đang là một xu hướng được ưa chuộng hiện nay. Điều này giúp tiết kiệm thời gian, chi phí xây dựng, tiết kiệm diện tích cũng như thích hợp với nhiều loại địa hình.
+      </p>
+
+      <h2 className="text-blue-900 font-semibold text-3xl my-4">6 lợi ích khi sử dụng container làm kho chứa hàng</h2>
+
+      <h3 className="text-blue-900 font-semibold text-2xl my-3">1. Đa dạng kích thước</h3>
+      <p className="text-blue-900">
+        Nhu cầu chứa hàng không giữ nguyên mà luôn thay đổi tùy thời điểm. Xây dựng nhà kho bạn sẽ gặp phải 2 tình trạng. Kho có kích thước nhỏ, không đủ diện tích chứa hàng hoặc kho quá lớn gây lãng phí.
+      </p>
+      <p className="text-blue-900">
+        Container kho sẽ giúp bạn giải quyết vấn đề này. Container có rất nhiều kích thước khác nhau từ 10 feet, 20 feet đến 40, 45 feet. Được thiết kế theo tiêu chuẩn quốc tế ISO; những container làm kho chứa hàng sẽ phù hợp với mọi diện tích mặt bằng có sẵn.
+      </p>
+      <p className="text-blue-900">
+        Nếu sử dụng kho container, bạn có thể linh hoạt lựa chọn kích thước container phù hợp với nhu cầu hàng hóa.
+      </p>
+
+      <h3 className="text-blue-900 font-semibold text-2xl my-3">2. Bảo quản hàng hóa tốt</h3>
+      <p className="text-blue-900">
+        Được sản xuất theo chuẩn quốc tế nên container kho còn có điều kiện bảo quản hàng hóa không hề thua kém so với một kho hàng thông thường.
+      </p>
+      <p className="text-blue-900">
+        Kho container đảm bảo thời gian sử dụng lâu dài, khả năng chống chịu được mọi điều kiện thời tiết khắc nghiệt bên ngoài.
+      </p>
+
+      <h3 className="text-blue-900 font-semibold text-2xl my-3">3. Kết cấu bền chắc</h3>
+      <p className="text-blue-900">
+        Các mặt của container được thiết kế từ chất liệu thép cao cấp không gỉ. Container đảm bảo khả năng chịu nhiệt, chịu lực cũng như khả năng chống ẩm và oxy hóa tốt. Sử dụng container kho trong thời gian dài cũng không cần lo lắng về chất lượng vì hàng hóa được bảo quản một cách tốt nhất.
+      </p>
+
+      <h3 className="text-blue-900 font-semibold text-2xl my-3">4. Tiết kiệm chi phí</h3>
+      <p className="text-blue-900">
+        Hầu hết các loại container sử dụng làm kho chứa hàng hóa đều được tận dụng từ những thùng container cũ nhưng vẫn có chất lượng rất tốt. Sau đó trải qua quá trình biến đổi thành kho lưu trữ hàng hóa.
+      </p>
+      <p className="text-blue-900">
+        Trong khi đó, việc xây dựng kho chứa mới đòi hỏi tốn rất nhiều thời gian và chi phí xây dựng. Vì vậy việc sử dụng container làm kho chứa hàng là một sự lựa chọn thông minh. Bên cạnh đó nó mang lại rất nhiều lợi ích cho các nhà đầu tư.
+      </p>
+
+      <h3 className="text-blue-900 font-semibold text-2xl my-3">5. Dễ dàng di chuyển (tiện lợi)</h3>
+      <p className="text-blue-900">
+        Một lợi ích khác mà việc sử dụng kho container đem lại là việc thuận tiện trong quá trình vận chuyển. Khi có nhu cầu, bạn có thể sử dụng di chuyển container đến vị trí khác vô cùng tiện lợi. Người sử dụng cũng không cần tốn quá nhiều thời gian để bốc dỡ hàng hóa. Họ hoàn toàn có thể vận chuyển cả kho chứa hàng nhờ đặc tính lưu động này.
+      </p>
+      <p className="text-blue-900">
+        Những kho hàng đặt ở vị trí thấp, rất dễ xảy ra ngập lụt nếu gặp phải mưa lớn. Với kết cấu bền chắc theo chuẩn quốc tế, những kho chứa hàng bằng container có thể dễ dàng di chuyển và xếp chồng lên nhau. Bảo quản hàng hóa bên trong một cách tuyệt đối.
+      </p>
+
+      <h3 className="text-blue-900 font-semibold text-2xl my-3">6. Vị trí không được xây dựng kho chứa hàng</h3>
+      <p className="text-blue-900">
+        Một số vị trí chưa xin được giấy phép xây dựng hoặc chính quyền địa phương không cho phép xây dựng kho chứa hàng. Việc sử dụng kho chứa hàng bằng container là vô cùng tối ưu. Vừa không vi phạm quyết định của chính quyền lại vừa bảo quản hàng hóa không bị hư hỏng.
+      </p>
+
+      <h2 className="text-blue-900 font-semibold text-3xl my-4">Địa chỉ phân phối container kho uy tín</h2>
+      <p className="text-blue-900">
+        Hiện nay, việc mua hoặc thuê container làm kho chứa hàng hóa là sự lựa chọn của rất nhiều người. Nguyên nhân vì rất nhiều lợi ích mà nó mang lại. Đáp ứng lại nhu cầu của khách hàng, có rất nhiều đơn vị đã tiến hành cung cấp và phân phối container kho phục vụ cho việc chứa hàng hóa. Việc có quá nhiều nơi cung cấp vô tình khiến cho nhiều người băn khoăn trong việc chọn lựa địa chỉ uy tín.
+      </p>
+      <p className="text-blue-900">
+        Tuệ Lâm Container sẽ giúp bạn giải quyết những băn khoăn này. Với Slogan “Cam kết chất lượng – Hiệu quả dài lâu”, chúng tôi tự tin là đơn vị cung cấp container làm kho chứa hàng hóa chất lượng tốt nhất với giá cả ưu đãi nhất cả nước. Chúng tôi sẽ đáp ứng mọi nhu cầu của bạn đa dạng các loại kích thước container kho từ 10 feet cho đến 45 feet.
+      </p>
     </div>
   );
 };
 
-export default Company;
+export default ContainerBenefits;
