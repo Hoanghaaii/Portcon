@@ -50,13 +50,6 @@ const products = [
 ];
 
 // Định nghĩa kiểu cho sản phẩm
-type Product = {
-  id: number;
-  name: string;
-  price: string;
-  imageUrls: string[];
-  inStock: boolean;
-};
 
 const Page: React.FC = () => {
   const router = useRouter();
