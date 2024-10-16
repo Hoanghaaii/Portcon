@@ -13,7 +13,7 @@ const ProductDetails = () => {
       content: (
         <>
           <div className=' text-blue-900 text-opacity-75 space-y-4'>
-          <Image quality={100} src={'/thietbi.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-4xl my-5'>
+          <Image quality={100} src={'/thietbi.jpeg'} alt='daukeo' width={1000} height={1000} className=' rounded-4xl my-5'>
             
             </Image>
             <p>Thiết bị bay hơi (còn gọi là thiết bị trao đổi nhiệt) - Hoạt động bằng cách hấp thụ nhiệt từ môi trường lạnh sau đó chuyển hóa thành hơi lạnh. Đây cũng chính là phần trao đổi nhiệt chính của các container lạnh.</p>

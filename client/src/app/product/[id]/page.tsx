@@ -80,7 +80,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
       <div className="flex w-full mb-4 p-8">
         <div className="rounded-3xl shadow-2xl bg-slate-100 max-w-max m-5 pb-5">
           <h2 className="text-xl font-semibold m-4 mb-8 text-blue-900">{product.name}</h2>
-          <div className='m-6 w-[600px] h-[400px] border-2 rounded-3xl mb-10 flex justify-center items-center'>
+          <div className='m-6 w-[600px] h-[400px] rounded-3xl mb-10 flex justify-center items-center'>
             <Image
               src={product.imageUrls[currentImageIndex]}
               alt={`Hình ảnh sản phẩm ${currentImageIndex + 1}`}
@@ -162,6 +162,25 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
           </div>
         </div>
       </div>
+      <div className='flex justify-center rounded-3xl p-5 bg-slate-100 mx-5 shadow-lg'>
+  <div className='max-w-5xl flex justify-center space-x-5'>
+  <Image 
+      src={params.id === '1' ? '/thongso20.png' : '/thongso40.png'} 
+      alt='thongso' 
+      width={700} 
+      height={700} 
+      className='object-contain '
+    />
+    <Image 
+      src={params.id === '1' ? '/banve.png' : '/banve40.png'} 
+      alt='banve' 
+      width={700} 
+      height={700} 
+      className='object-contain '
+    />
+    
+  </div>
+</div>
 
       <div className='flex justify-center w-full'>
         <div className='w-full max-w-5xl mx-auto'>
