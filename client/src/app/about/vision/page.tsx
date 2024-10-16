@@ -12,7 +12,7 @@ const Company = () => {
 
         {/* About Section */}
         <section className="mb-20 ">
-          <p className=' text-blue-900 font-extrabold text-6xl  justify-center flex text-center'>&quot;Portcon - Đồng hành cùng bạn bảo vệ giá trị sản phẩm&quot;</p>
+          <p className=' text-blue-900 font-bold text-6xl  justify-center flex text-center'>&quot;Portcon - Đồng hành cùng bạn bảo vệ giá trị sản phẩm&quot;</p>
           <p className="text-blue-900 leading-relaxed my-5 font-semibold text-xl">
           Trở thành nhà cung cấp hàng đầu các giải pháp lưu trữ thông minh và linh hoạt, đáp ứng mọi nhu cầu của khách hàng, từ doanh nghiệp vừa và nhỏ đến các tập đoàn lớn. Chúng tôi cam kết mang đến những trải nghiệm dịch vụ vượt trội thông qua việc ứng dụng công nghệ tiên tiến và tối ưu hóa quy trình vận hành.
 

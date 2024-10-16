@@ -18,7 +18,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 flex mt-52 justify-center text-white text-lg text-center">
           <div>
-            <p className="text-6xl font-extrabold whitespace-nowrap m-3">Chúng Tôi Ở Khắp Mọi Nơi</p>
+            <p className="text-6xl font-bold whitespace-nowrap m-3">Chúng Tôi Ở Khắp Mọi Nơi</p>
             <div className="mt-16">
               <Button className="text-white p-7 m-4 bg-blue-900 font-bold">Tìm hiểu thêm</Button>
               <Button className="text-white p-7 m-4 bg-blue-900 font-bold">Nhận báo giá</Button>
@@ -60,7 +60,7 @@ export default function Home() {
           <p className=" text-4xl font-semibold text-blue-900">Thông tin liên hệ</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6">
           <Infor 
-              src="/avagirl.avif" 
+              src="/avagirl.webp" 
               fallbackText="An" 
               name="Khúc Minh An" 
               description="0123456789" 

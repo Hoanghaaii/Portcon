@@ -9,7 +9,7 @@ const Company = () => {
 
         {/* About Section */}
         <section className="mb-20 ">
-          <p className=' text-blue-900 font-extrabold text-4xl  justify-center flex'>THỊ TRƯỜNG CONTAINER DỰ KIẾN SẼ TĂNG TRƯỞNG</p>
+          <p className=' text-blue-900 font-bold text-4xl  justify-center flex'>THỊ TRƯỜNG CONTAINER DỰ KIẾN SẼ TĂNG TRƯỞNG</p>
           <p className='flex justify-end text-blue-900 text-opacity-60'>Author: Minh An </p>
           <p className="text-blue-900 leading-relaxed my-5 text-xl">
   Theo báo cáo nghiên cứu thị trường mới nhất của Technavio, 
