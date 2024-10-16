@@ -11,7 +11,7 @@ export default function Home() {
           quality={100}
           layout="responsive"
           alt="pageImg"
-          src="/pageImg.jpg"
+          src="/trangchu.png"
           width={100}
           height={100}
           className="w-full"
@@ -19,7 +19,6 @@ export default function Home() {
         <div className="absolute inset-0 flex mt-52 justify-center text-white text-lg text-center">
           <div>
             <p className="text-6xl font-extrabold whitespace-nowrap m-3">Chúng Tôi Ở Khắp Mọi Nơi</p>
-            <p className="whitespace-nowrap font-bold">Công ty phân phối Container top 1 Hà Nội từ những năm 2003</p>
             <div className="mt-16">
               <Button className="text-white p-7 m-4 bg-blue-900 font-bold">Tìm hiểu thêm</Button>
               <Button className="text-white p-7 m-4 bg-blue-900 font-bold">Nhận báo giá</Button>
@@ -60,34 +59,35 @@ export default function Home() {
         <div className="flex justify-center items-center flex-col mb-5">
           <p className=" text-4xl font-semibold text-blue-900">Thông tin liên hệ</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-6">
-            <Infor 
-              src="/pageImg.jpg" 
+          <Infor 
+              src="/avagirl.avif" 
               fallbackText="An" 
               name="Khúc Minh An" 
               description="0123456789" 
               role="Admin"
             />
             <Infor 
-              src="/pageImg.jpg" 
-              fallbackText="An" 
-              name="Khúc Minh An" 
-              description="0123456789" 
+              src="/avaboy.png" 
+              fallbackText="phong" 
+              name="Nguyễn Hoàng Phong" 
+              description="0866159001" 
               role="Admin"
             />
             <Infor 
-              src="/pageImg.jpg" 
-              fallbackText="An" 
-              name="Khúc Minh An" 
-              description="0123456789" 
+              src="/avagirl3.jpg" 
+              fallbackText="anh" 
+              name="Trần Thị Ngọc Anh " 
+              description="0339882124" 
               role="Admin"
             />
             <Infor 
-              src="/pageImg.jpg" 
-              fallbackText="An" 
-              name="Khúc Minh An" 
-              description="0123456789" 
+              src="/avagirl5.jpg" 
+              fallbackText="duong" 
+              name="Đỗ Thị Thùy Dương" 
+              description="0399377669" 
               role="Admin"
             />
+            
             
           </div>
         </div>

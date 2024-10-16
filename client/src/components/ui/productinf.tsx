@@ -13,6 +13,9 @@ const ProductDetails = () => {
       content: (
         <>
           <div className=' text-blue-900 text-opacity-75 space-y-4'>
+          <Image quality={100} src={'/thietbi.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-4xl my-5'>
+            
+            </Image>
             <p>Thiết bị bay hơi (còn gọi là thiết bị trao đổi nhiệt) - Hoạt động bằng cách hấp thụ nhiệt từ môi trường lạnh sau đó chuyển hóa thành hơi lạnh. Đây cũng chính là phần trao đổi nhiệt chính của các container lạnh.</p>
             <p>Thiết bị ngưng tụ (còn gọi là dàn ngưng tụ) - Có tác dụng hóa lỏng chất dung môi sau khi nén trong chu trình làm lạnh, làm mát bằng không khí lưu động. Chính vì thế nên thiết bị ngưng tụ cũng cần được vệ sinh thường xuyên, không để bụi bẩn bám dày và phát huy hiệu quả tối đa khi làm lạnh.</p>
             <p>Máy nén (hay nén môi chất lạnh): Bộ phận này có nhiệm vụ nén môi chất lạnh từ áp suất thấp lên áp suất cao hơn. Trên thị trường cũng có nhiều loại máy nén khác nhau, tùy vào từng hãng sử dụng (máy nén Piston, máy nén ro-to, máy nén trục vít, máy nén xoắn ốc, máy nén ly tâm).</p>
@@ -29,13 +32,18 @@ const ProductDetails = () => {
       content: (
         <>
           <div className=' text-blue-900 text-opacity-75 space-x-8'>
-            <p className=' mb-4'>Các tính năng nổi bật của sản phẩm bao gồm:</p>
+          <Image src={'/tinhnang.png'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
+            
+            </Image>
+            <p className=' mb-4 font-semibold'>Các tính năng nổi bật của sản phẩm bao gồm:</p>
             <ul className=' space-y-4'>
-                <li>Hoạt động ổn định và hiệu quả trong nhiều điều kiện thời tiết.</li>
-                <li>Tiết kiệm năng lượng nhờ vào công nghệ tiên tiến.</li>
-                <li>Thiết kế nhỏ gọn và dễ dàng lắp đặt.</li>
-                <li>Hệ thống điều khiển thông minh, dễ dàng vận hành.</li>
-                <li>Chế độ bảo trì đơn giản, tiết kiệm thời gian.</li>
+                <li>Thiết kế chống chịu thời tiết</li>
+                <li>Chống thấm nước và chống động vật hoang dã</li>
+                <li>Lối vào ở tầng trệt</li>
+                <li>Thông số kỹ thuật ISO</li>
+                <li>Sàn chịu tải</li>
+                <li>Có thể tuỳ chỉnh</li>
+                <li>Giao hàng dễ dàng</li>
             </ul>
           </div>
         </>
@@ -45,7 +53,7 @@ const ProductDetails = () => {
       title: 'Dịch vụ vận chuyển',
       content: (
         <>
-          <Image src={'/daukeo.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
+          <Image src={'/dichvuvanchuyen.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
             
           </Image>
           <p className=' text-blue-900'>Chúng tôi sử dụng xe đầu kéo rơ mooc để vận chuyển container. là một loại xe tải có một hoặc nhiều rơ mooc gắn phía sau để vận chuyển hàng hóa. Xe đầu kéo thường có động cơ mạnh mẽ và có thể kéo được nhiều rơ mooc. Rơ mooc thường có kích thước lớn và có thể chứa được nhiều hàng hóa.

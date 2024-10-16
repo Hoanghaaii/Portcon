@@ -126,24 +126,7 @@ const Company = () => {
 </div>
 
 
-<div className="mb-10">
-  <h1 className="text-blue-900 font-semibold text-2xl my-5">6. Dịch vụ vận chuyển đường bộ uy tín, giá tốt – Baspro</h1>
-  <p className="text-blue-900">
-    Baspro là một trong những nhà cung cấp dịch vụ hoàn tất đơn hàng, vận chuyển và hậu cần kho vận hàng đầu tại Việt Nam. Với việc đầu tư chuyên sâu vào phát triển trung tâm Logistics thông minh bằng ứng dụng công nghệ, Baspro dần trở thành đơn vị vận chuyển hàng hóa được đông đảo khách hàng tin tưởng và chọn lựa.
-  </p>
-  <p className="text-blue-900">
-    Baspro cho phép khách hàng vận chuyển hàng hóa với khối lượng lớn nhưng giá thành phải chăng dựa vào hệ thống công nghệ thông tin đỉnh cao khi hỗ trợ kết nối với các sàn TMĐT, mạng xã hội và các nền tảng khác phổ biến hiện nay.
-  </p>
-  <p className="text-blue-900">
-    Đồng thời Baspro cũng cung cấp đa dạng các loại hình dịch vụ cùng nhiều phương thức vận chuyển khác nhau. Sở hữu mạng lưới kho rộng khắp cả nước nên Baspro rút ngắn được thời gian giao hàng đến tay người tiêu dùng đồng thời cũng giảm chi phí giao hàng. Các doanh nghiệp sẽ không cần phải đầu tư nhiều về kho bãi lẫn nguồn nhân lực.
-  </p>
-  <p className="text-blue-900">
-    Hơn thế, Baspro còn có hệ thống giao hàng nhanh chóng, đúng thời gian quy định khi kết nối được với tất cả các dịch vụ giao hàng ở chặng cuối.
-  </p>
-  <p className="text-blue-900">
-    Nếu doanh nghiệp bạn đang có nhu cầu tìm một đơn vị vận chuyển hàng hóa uy tín thì hãy liên hệ ngay với chúng tôi theo thông tin bên dưới.
-  </p>
-</div>
+
 
         </section>
       </div>

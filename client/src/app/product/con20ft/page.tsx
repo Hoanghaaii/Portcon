@@ -7,42 +7,42 @@ import Image from 'next/image';
 const products = [
   {
     id: 1,
-    name: 'Sản phẩm 1',
+    name: 'Container portcon 20FT 1',
     price: '100.000 VNĐ',
     imageUrls: ['/1111.jpg', '/11.jpg', '/111.jpg', '/1111.jpg'], // Mảng chứa nhiều ảnh
     inStock: true,
   },
   {
     id: 2,
-    name: 'Sản phẩm 2',
+    name: 'Container portcon 20FT 2',
     price: '200.000 VNĐ',
     imageUrls: ['/2.jpg', '/2.jpg'],
-    inStock: false,
+    inStock: true,
   },
   {
     id: 3,
-    name: 'Sản phẩm 3',
+    name: 'Container portcon 20FT 3',
     price: '150.000 VNĐ',
     imageUrls: ['/3.jpg'],
     inStock: true,
   },
   {
     id: 4,
-    name: 'Sản phẩm 4',
+    name: 'Container portcon 20FT 4',
     price: '300.000 VNĐ',
     imageUrls: ['/3.jpg', '/2.jpg'],
     inStock: true,
   },
   {
     id: 5,
-    name: 'Sản phẩm 5',
+    name: 'Container portcon 20FT 5',
     price: '300.000 VNĐ',
     imageUrls: ['/2.jpg', '/2.jpg', '/2.jpg'],
     inStock: true,
   },
   {
     id: 6,
-    name: 'Sản phẩm 6',
+    name: 'Container portcon 20FT 6',
     price: '300.000 VNĐ',
     imageUrls: ['/2.jpg', '/2.jpg'],
     inStock: true,
@@ -54,9 +54,9 @@ const products = [
 const Page: React.FC = () => {
   const router = useRouter();
 
-  const handleCardClick = (productId: number) => { 
+  const handleCardClick = () => { 
     // Chuyển hướng đến trang chi tiết dựa trên `id` của sản phẩm
-    router.push(`/product/${productId}`);
+    router.push(`/product/1`);
   };
   
   return (
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
           <div
             key={product.id}
             className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition duration-200"
-            onClick={() => handleCardClick(product.id)} // Chỉ truyền id
+            onClick={() => handleCardClick()} // Chỉ truyền id
           >
             <Image
               width={100}

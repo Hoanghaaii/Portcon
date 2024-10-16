@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-center">Số điện thoại: <i>0123456789 (Ms.AnXingTu)</i></p>
+          <p className="text-center">Số điện thoại: <i>0382344458 (Ms.AnKhuc)</i></p>
           <p className="text-center">© 2024 PORTCON. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>

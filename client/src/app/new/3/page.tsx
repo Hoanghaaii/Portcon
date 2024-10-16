@@ -64,14 +64,6 @@ const ContainerBenefits = () => {
       <p className="text-blue-900">
         Một số vị trí chưa xin được giấy phép xây dựng hoặc chính quyền địa phương không cho phép xây dựng kho chứa hàng. Việc sử dụng kho chứa hàng bằng container là vô cùng tối ưu. Vừa không vi phạm quyết định của chính quyền lại vừa bảo quản hàng hóa không bị hư hỏng.
       </p>
-
-      <h2 className="text-blue-900 font-semibold text-3xl my-4">Địa chỉ phân phối container kho uy tín</h2>
-      <p className="text-blue-900">
-        Hiện nay, việc mua hoặc thuê container làm kho chứa hàng hóa là sự lựa chọn của rất nhiều người. Nguyên nhân vì rất nhiều lợi ích mà nó mang lại. Đáp ứng lại nhu cầu của khách hàng, có rất nhiều đơn vị đã tiến hành cung cấp và phân phối container kho phục vụ cho việc chứa hàng hóa. Việc có quá nhiều nơi cung cấp vô tình khiến cho nhiều người băn khoăn trong việc chọn lựa địa chỉ uy tín.
-      </p>
-      <p className="text-blue-900">
-        Tuệ Lâm Container sẽ giúp bạn giải quyết những băn khoăn này. Với Slogan “Cam kết chất lượng – Hiệu quả dài lâu”, chúng tôi tự tin là đơn vị cung cấp container làm kho chứa hàng hóa chất lượng tốt nhất với giá cả ưu đãi nhất cả nước. Chúng tôi sẽ đáp ứng mọi nhu cầu của bạn đa dạng các loại kích thước container kho từ 10 feet cho đến 45 feet.
-      </p>
     </div>
   );
 };

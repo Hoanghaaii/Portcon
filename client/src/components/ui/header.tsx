@@ -13,7 +13,7 @@ const Header = () => {
         </div>
         <div className='flex items-center mr-10'>
             <FaPhoneAlt className="mr-2" size={18} />
-            <p className="text-lg text-blue-900 font-semibold"><i className='font-semibold'>0123456789</i></p>
+            <p className="text-lg text-blue-900 font-semibold"><i className='font-semibold'>0382344458</i></p>
         </div>
       </div>
       <hr className='border-2 opacity-25 rounded-full'/>

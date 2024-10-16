@@ -29,37 +29,21 @@ const Company = () => {
           </div>
         </section>
         <section className=" mb-48 ">
-          <h2 className="text-3xl font-semibold text-blue-900"><u className=''>Lịch sử công ty</u></h2>
-          <p className="text-blue-900 font-semibold leading-relaxed my-5">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
-          </p>
-          <div className=' w-full mb-12'>
-            <Image
-              src="/pageImg.jpg"
-              alt="Company Logo"
-              width={10000}
-              height={10000}
-              >
-            </Image>
-          </div>
           <div className="flex flex-col items-center">
-            <p className="text-center text-md font-semibold text-blue-900">Các mốc thời gian của công ty (Bấm vào các mốc thời gian để xem chi tiết)</p>
+            <p className="text-center text-md font-semibold text-blue-900">Phù hợp với (Bấm vào các mục để xem chi tiết)</p>
             <Timeline />
           </div>
         </section>
         <section className=" ">
-          <h2 className="text-3xl font-semibold text-blue-900 mb-6"><u className=''>Thành tựu</u></h2>
+          <h2 className="text-3xl font-semibold text-blue-900 mb-6"><u className=''>Hỗ trợ khách hàng</u></h2>
           <p className=" leading-relaxed my-5 text-blue-900 font-semibold">
-            Công ty chúng tôi được thành lập từ năm 2003 với mục tiêu mang đến những sản phẩm công nghệ hiện đại, sáng tạo và
-            đáng tin cậy. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi luôn nỗ lực để đáp ứng mọi nhu cầu của
-            khách hàng.
+              Chúng tôi có một đội ngũ nhân viên giàu kinh nghiệm và đam mê, luôn nỗ lực để đáp ứng mọi nhu cầu của
+            khách hàng với thái độ làm việc chỉn chu, chuyên nghiệp.
           </p>
           <div className='flex justify-center'>
-          <Cardpage src='' name='Giải nhà bán lẻ của năm' description=''/>
-          <Cardpage src='' name='Giải công ty startup của năm' description=''/>
-          <Cardpage src='' name='Giải Cánh diều vàng' description=''/>
+          <Cardpage src='/huongdanmuahang.png' name='Hướng dẫn mua hàng' description=''/>
+          <Cardpage src='/chinhsachbaohanh.jpg' name='Chính sách bảo hành' description=''/>
+          <Cardpage src='/dichvuvanchuyen.jpeg' name='Chính sách vận chuyển' description=''/>
           </div>
         </section>
       </div>

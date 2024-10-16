@@ -6,24 +6,24 @@ const Timeline = () => {
   // Dữ liệu các sự kiện, thêm đường dẫn hình ảnh vào đây
   const events = [
     {
-      time: '2003',
-      description: 'Thành lập công ty',
-      imageUrl: '/pageImg.jpg', // Đường dẫn ảnh
+      time: '1',
+      description: 'Doanh nghiệp sản xuất',
+      imageUrl: '/sxthucpham.jpg', // Đường dẫn ảnh
     },
     {
-      time: '2008',
-      description: 'Bán được 1 sản phẩm',
-      imageUrl: '/pageImg.jpg',
+      time: '2',
+      description: 'Doanh nghiệp phân phối',
+      imageUrl: '/phanphoithucpham.jpg',
     },
     {
-      time: '2021',
-      description: 'Mở rộng quy mô',
-      imageUrl: '/pageImg.jpg',
+      time: '3',
+      description: 'Doanh nghiệp kinh doanh',
+      imageUrl: '/kinhdoanhthucpham.jpg',
     },
     {
-      time: '2024',
-      description: 'Bán được 2 sản phẩm',
-      imageUrl: '/catLaugh.jpeg',
+      time: '4',
+      description: 'Doanh nghiệp kinh doanh theo mùa vụ và thời vụ',
+      imageUrl: '/kinhdoanhthoivu.jpg',
     },
   ];
 
@@ -43,7 +43,7 @@ const Timeline = () => {
           <div key={index} className="relative">
             {/* Nút thời gian */}
             <div
-              className={`flex justify-center items-center w-12 h-12 rounded-full cursor-pointer ${
+              className={`flex justify-center items-center w-12 h-12 rounded-full cursor-pointer hover:scale-125 duration-500 ${
                 activeIndex === index ? 'bg-blue-900 text-white' : 'bg-gray-300 text-blue-900'
               }`}
               onClick={() => handleClick(index)} // Sử dụng hàm handleClick với index

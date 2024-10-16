@@ -7,28 +7,28 @@ import Image from 'next/image';
 const products = [
   {
     id: 7,
-    name: 'Sản phẩm 1',
+    name: 'Container portcon 1',
     price: '100.000 VNĐ',
     imageUrls: ['/7.jpg', '/pageImg.jpg', '/pageImg.jpg'],
     inStock: true,
   },
   {
     id: 8,
-    name: 'Sản phẩm 2',
+    name: 'Container portcon 2',
     price: '200.000 VNĐ',
     imageUrls: ['/8.jpg', '/pageImg.jpg'],
-    inStock: false,
+    inStock: true,
   },
   {
     id: 9,
-    name: 'Sản phẩm 3',
+    name: 'Container portcon 3',
     price: '150.000 VNĐ',
     imageUrls: ['/9.jpg'],
     inStock: true,
   },
   {
     id: 10,
-    name: 'Sản phẩm 4',
+    name: 'Container portcon 4',
     price: '300.000 VNĐ',
     imageUrls: ['/10.jpg', '/pageImg.jpg'],
     inStock: true,
@@ -40,9 +40,9 @@ const products = [
 const Page: React.FC = () => {
   const router = useRouter();
 
-  const handleCardClick = (productId: number) => { 
+  const handleCardClick = () => { 
     // Chuyển hướng đến trang chi tiết dựa trên `id` của sản phẩm
-    router.push(`/product/${productId}`);
+    router.push(`/product/7`);
   };
 
   return (
@@ -53,7 +53,7 @@ const Page: React.FC = () => {
           <div
             key={product.id}
             className="bg-white shadow-md rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition duration-200"
-            onClick={() => handleCardClick(product.id)}
+            onClick={() => handleCardClick()}
           >
             <Image
               width={100}

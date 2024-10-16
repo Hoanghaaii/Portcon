@@ -17,12 +17,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
   const router = useRouter();
   const products: { [key: string]: { name: string; inStock: string; imageUrls: string[] } } = {
     '1': {
-      name: "Container 1",
+      name: "Container PORTCON 20FT",
       inStock: 'true',
       imageUrls: ["/1111.jpg", "/1.jpg", "/11.jpg", "/111.jpg"],
     },
     '7': {
-      name: "Container 7",
+      name: "Container PORTCON 40FT",
       inStock: 'true',
       imageUrls: ["/7.jpg", "/77.jpg", "/777.jpg"],
     }
@@ -79,7 +79,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     <div>
       <div className="flex w-full mb-4 p-8">
         <div className="rounded-3xl shadow-2xl bg-slate-100 max-w-max m-5 pb-5">
-          <h2 className="text-xl font-semibold m-4 text-blue-900">{product.name}</h2>
+          <h2 className="text-xl font-semibold m-4 mb-8 text-blue-900">{product.name}</h2>
           <div className='m-6 w-[600px] h-[400px] border-2 rounded-3xl mb-10 flex justify-center items-center'>
             <Image
               src={product.imageUrls[currentImageIndex]}
@@ -122,13 +122,13 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
             </div>
             <p className='font-semibold mt-10 text-blue-900'>Bạn lưu trữ container ở đâu?</p>
             <div className='flex ml-5 flex-col'>
-              <div className='flex'>
-                <div className='flex items-center mr-32'>
+              <div className='flex space-x-5'>
+                <div className='flex items-center'>
                   <input
                     type="radio"
                     id="option1"
                     name="portconOptions"
-                    value="available"
+                    value="Vị trí có sẵn của PORTCON"
                     onChange={handleOptionChange}
                   />
                   <label htmlFor="option1" className='mx-2 text-blue-900'>Vị trí có sẵn của PORTCON</label>
@@ -138,10 +138,20 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                     type="radio"
                     id="option2"
                     name="portconOptions"
-                    value="suggested"
+                    value="Vị trí gợi ý"
                     onChange={handleOptionChange}
                   />
                   <label htmlFor="option2" className='mx-2 text-blue-900'>Vị trí gợi ý</label>
+                </div>
+                <div className='flex items-center'>
+                  <input
+                    type="radio"
+                    id="option3"
+                    name="portconOptions"
+                    value="Đã có vị trí đặt kho"
+                    onChange={handleOptionChange}
+                  />
+                  <label htmlFor="option2" className='mx-2 text-blue-900'>Đã có vị trí đặt kho</label>
                 </div>
               </div>
             </div>
