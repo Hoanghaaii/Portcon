@@ -63,7 +63,7 @@ export default function Home() {
               src="/avagirl.webp" 
               fallbackText="An" 
               name="Khúc Minh An" 
-              description="0123456789" 
+              description="0382344458" 
               role="Admin"
             />
             <Infor 
