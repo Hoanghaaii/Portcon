@@ -21,7 +21,7 @@ const Company = () => {
           </p>
           <div className=' w-full h-50'>
             <Image
-              src="/mission.png"
+              src="/sumenh.jpg"
               alt="mission"
               width={10000}
               height={10000}

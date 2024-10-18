@@ -6,6 +6,7 @@ import { Button } from '../../../components/ui/button';
 import ProductDetails from '../../../components/ui/productinf';
 import { useRouter } from 'next/navigation';
 import DatePicker from '@/components/ui/datepicker';
+import ProductKhoDetails from '../../../components/ui/productkhoinfor'
 
 interface ProductDetailProps {
   params: {
@@ -21,11 +22,21 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
       inStock: 'true',
       imageUrls: ["/1111.jpg", "/1.jpg", "/11.jpg", "/111.jpg"],
     },
+    '2': {
+      name: "Container khô PORTCON 20FT",
+      inStock: 'true',
+      imageUrls: ["/kho1.jpg", "/kho2.jpg", "/contkho22.jpg", "/contkho11.webp"],
+    },
     '7': {
       name: "Container PORTCON 40FT",
       inStock: 'true',
       imageUrls: ["/7.jpg", "/77.jpg", "/777.jpg"],
-    }
+    },
+    '8': {
+      name: "Container khô PORTCON 40FT",
+      inStock: 'true',
+      imageUrls: ["/kho1.jpg", "/contkho111.jpg", "/contkho111.webp"],
+    },
   };
 
   const product = products[params.id];
@@ -165,7 +176,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
       <div className='flex justify-center rounded-3xl p-5 bg-slate-100 mx-5 shadow-lg'>
   <div className='max-w-5xl flex justify-center space-x-5'>
   <Image 
-      src={params.id === '1' ? '/thongso20.png' : '/thongso40.png'} 
+      src={params.id === '1' ? '/thongso20.png' : params.id===  '2' ? '/thongsocontkho20ft.png' : params.id=== '7' ? '/thongso40.png' : '/thongsocontkho40ft.png'} 
       alt='thongso' 
       width={700} 
       height={700} 
@@ -183,9 +194,10 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
 </div>
 
       <div className='flex justify-center w-full'>
-        <div className='w-full max-w-5xl mx-auto'>
-          <ProductDetails />
-        </div>
+      <div className='w-full max-w-5xl mx-auto'>
+        {params.id === '1' || params.id === '7' ? <ProductDetails /> : <ProductKhoDetails />}
+      </div>
+
       </div>
     </div>
   );

@@ -30,6 +30,14 @@ const news = [
     imageUrl: '/new3.jpg', // Đường dẫn tới hình ảnh
   },
   // Thêm các bài viết khác...
+  {
+    id:4,
+    title: 'LỢI ÍCH KHI SỬ DỤNG CONTAINER CŨ LÀM KHO',
+    description: '',
+    author: 'Minh An',
+    date: '2024-10-14',
+    imageUrl: '/new4.jpg', // Đường dẫn tới hình ảnh
+  },
 ];
 
 const NewsPage = () => {
