@@ -27,7 +27,7 @@ const products = [
     inStock: true,
   },
   {
-    id: 2,
+    id: 3,
     name: 'Container portcon khô 20FT 4',
     price: '300.000 VNĐ',
     imageUrls: ['/kho2.jpg', '/2.jpg'],

@@ -23,7 +23,7 @@ const products = [
     id: 8,
     name: 'Container khô portcon 3',
     price: '150.000 VNĐ',
-    imageUrls: ['/9.jpg'],
+    imageUrls: ['/40ft.jpg'],
     inStock: true,
   },
   {

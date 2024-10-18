@@ -25,7 +25,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     '2': {
       name: "Container khô PORTCON 20FT",
       inStock: 'true',
-      imageUrls: ["/kho1.jpg", "/kho2.jpg", "/contkho22.jpg", "/contkho11.webp"],
+      imageUrls: ["/kho1.jpg", "/contkho11.webp"],
+    },
+    '3': {
+      name: "Container khô PORTCON 20FT",
+      inStock: 'true',
+      imageUrls: ["/kho2.jpg", "/contkho22.jpg"],
     },
     '7': {
       name: "Container PORTCON 40FT",
@@ -35,7 +40,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     '8': {
       name: "Container khô PORTCON 40FT",
       inStock: 'true',
-      imageUrls: ["/kho1.jpg", "/contkho111.jpg", "/contkho111.webp"],
+      imageUrls: ["/40ft.jpg", "/contkho111.jpg", "/contkho111.webp"],
     },
   };
 
@@ -90,14 +95,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     <div>
       <div className="flex w-full mb-4 p-8">
         <div className="rounded-3xl shadow-2xl bg-slate-100 max-w-max m-5 pb-5">
-          <h2 className="text-xl font-semibold m-4 mb-8 text-blue-900">{product.name}</h2>
+          <h2 className="text-xl font-semibold m-4 mb-20 text-blue-900">{product.name}</h2>
           <div className='m-6 w-[600px] h-[400px] rounded-3xl mb-10 flex justify-center items-center'>
             <Image
               src={product.imageUrls[currentImageIndex]}
               alt={`Hình ảnh sản phẩm ${currentImageIndex + 1}`}
               width={600}
               height={400}
-              className="rounded-3xl transition hover:scale-105 duration-1000"
+              className="rounded-3xl transition hover:scale-105 duration-1000 mb-12"
             />
           </div>
           <div className="flex justify-center space-x-2 m-4">
@@ -176,7 +181,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
       <div className='flex justify-center rounded-3xl p-5 bg-slate-100 mx-5 shadow-lg'>
   <div className='max-w-5xl flex justify-center space-x-5'>
   <Image 
-      src={params.id === '1' ? '/thongso20.png' : params.id===  '2' ? '/thongsocontkho20ft.png' : params.id=== '7' ? '/thongso40.png' : '/thongsocontkho40ft.png'} 
+      src={params.id === '1' ? '/thongso20.png' : params.id===  '2' ? '/thongsocontkho20ft.png': params.id===  '3' ? '/thongsocontkho20ft.png' : params.id=== '7' ? '/thongso40.png' : '/thongsocontkho40ft.png'} 
       alt='thongso' 
       width={700} 
       height={700} 
