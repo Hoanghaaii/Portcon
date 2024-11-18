@@ -36,7 +36,7 @@ const Company = () => {
 
           <div className=' w-full h-50'>
             <Image
-              src="/pageImg.jpg"
+              src="/tintuc1.jpg"
               alt="Company Logo"
               width={10000}
               height={10000}

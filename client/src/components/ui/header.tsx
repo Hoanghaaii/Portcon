@@ -33,7 +33,7 @@ const Header = () => {
                     className="p-4 hover:scale-105 text-blue-900 font-semibold text-lg hover:text-white transition-all duration-200 w-full text-center"
                     href={'/product/con20ft'}
                   >
-                    Container 20FT
+                    Container bách hoá
                   </Link>
                 </li>
                 <li className="py-4 hover:bg-blue-900 flex justify-center">
@@ -41,7 +41,7 @@ const Header = () => {
                     className="p-4 hover:scale-105 text-blue-900 font-semibold text-lg hover:text-white transition-all duration-200 w-full text-center"
                     href={'/product/con40ft'}
                   >
-                    Container 40FT
+                    Container chia ngăn
                   </Link>
                 </li>
               </ul>

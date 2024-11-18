@@ -22,7 +22,7 @@ const Timeline = () => {
     },
     {
       time: '4',
-      description: 'Doanh nghiệp kinh doanh theo mùa vụ và thời vụ',
+      description: 'Doanh nghiệp kinh doanh theo thời vụ',
       imageUrl: '/kinhdoanhthoivu.jpg',
     },
   ];

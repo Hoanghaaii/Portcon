@@ -11,7 +11,7 @@ const news = [
     description: '',
     author: 'Minh An',
     date: '2024-10-14',
-    imageUrl: '/new1.webp', // Đường dẫn tới hình ảnh
+    imageUrl: '/tintuc1.jpg', // Đường dẫn tới hình ảnh
   },
   {
     id:2,
@@ -19,7 +19,7 @@ const news = [
     description: '',
     author: 'Minh An',
     date: '2024-10-14',
-    imageUrl: '/new2.jpg', // Đường dẫn tới hình ảnh
+    imageUrl: '/tintuc2.jpg', // Đường dẫn tới hình ảnh
   },
   {
     id:3,

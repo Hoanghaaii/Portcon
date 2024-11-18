@@ -11,7 +11,7 @@ const Company = () => {
         <section className="mb-20 space-y-4">
           <h2 className="text-blue-900 font-bold text-4xl text-center">DỊCH VỤ VẬN TẢI ĐƯỜNG BỘ. ƯU VÀ NHƯỢC ĐIỂM</h2>
           <p className="flex justify-end text-blue-900 text-opacity-60">Author: Minh An</p>
-          <Image src={'/new2.jpg'} alt='new' width={10000} height={10000}></Image>
+          <Image src={'/tintuc2.jpg'} alt='new' width={10000} height={10000}></Image>
           <h1 className="text-blue-900 font-semibold text-2xl my-5">1. Vận tải đường bộ: Ưu nhược điểm</h1>
           
           <div className="mb-10">

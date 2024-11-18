@@ -11,7 +11,7 @@ export default function Home() {
           quality={100}
           layout="responsive"
           alt="pageImg"
-          src="/trangchu.png"
+          src="/trangbia.png"
           width={100}
           height={100}
           className="w-full"

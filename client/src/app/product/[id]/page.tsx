@@ -6,7 +6,8 @@ import { Button } from '../../../components/ui/button';
 import ProductDetails from '../../../components/ui/productinf';
 import { useRouter } from 'next/navigation';
 import DatePicker from '@/components/ui/datepicker';
-import ProductKhoDetails from '../../../components/ui/productkhoinfor'
+import ProductChiaNgan from '@/components/contchiangan';
+import ImageGrid from '@/components/ui/chianganpicker';
 
 interface ProductDetailProps {
   params: {
@@ -20,7 +21,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     '1': {
       name: "Container PORTCON 20FT",
       inStock: 'true',
-      imageUrls: ["/1111.jpg", "/1.jpg", "/11.jpg", "/111.jpg"],
+      imageUrls: ["/containerbachhoa1.png", "/1.jpg", "/11.jpg", "/111.jpg"],
     },
     '2': {
       name: "Container khô PORTCON 20FT",
@@ -35,12 +36,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     '7': {
       name: "Container PORTCON 40FT",
       inStock: 'true',
-      imageUrls: ["/7.jpg", "/77.jpg", "/777.jpg"],
+      imageUrls: ["/chiangan1.png", "/77.jpg", "/777.jpg"],
     },
     '8': {
       name: "Container khô PORTCON 40FT",
       inStock: 'true',
-      imageUrls: ["/40ft.jpg", "/contkho111.jpg", "/contkho111.webp"],
+      imageUrls: ["/chiangan2.png", "/contkho111.jpg", "/contkho111.webp"],
     },
   };
 
@@ -170,10 +171,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                   <label htmlFor="option2" className='mx-2 text-blue-900'>Đã có vị trí đặt kho</label>
                 </div>
               </div>
+              <hr className='m-2'/>
+              <ImageGrid/>
             </div>
             {errorMessage && <p className='text-red-600'>{errorMessage}</p>} {/* Display error message */}
             <Button className='w-full mt-5 bg-blue-900' onClick={handleSubmit}>
-              Nhận báo giá
+              Đặt 
             </Button>
           </div>
         </div>
@@ -188,7 +191,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
       className='object-contain '
     />
     <Image 
-      src={params.id === '1' ? '/banve.png' : '/banve40.png'} 
+      src={params.id === '1' ? '/banve.png' : '/banvekythuat.jpg'} 
       alt='banve' 
       width={700} 
       height={700} 
@@ -200,7 +203,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
 
       <div className='flex justify-center w-full'>
       <div className='w-full max-w-5xl mx-auto'>
-        {params.id === '1' || params.id === '7' ? <ProductDetails /> : <ProductKhoDetails />}
+        {params.id === '1' ? <ProductDetails /> : <ProductChiaNgan />}
       </div>
 
       </div>

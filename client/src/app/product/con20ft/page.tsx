@@ -9,14 +9,14 @@ const products = [
     id: 1,
     name: 'Container portcon 20FT 1',
     price: '100.000 VNĐ',
-    imageUrls: ['/1111.jpg', '/11.jpg', '/111.jpg', '/1111.jpg'],
+    imageUrls: ['/containerbachhoa1.png', '/11.jpg', '/111.jpg', '/1111.jpg'],
     inStock: true,
   },
   {
     id: 1,
     name: 'Container portcon 20FT 2',
     price: '200.000 VNĐ',
-    imageUrls: ['/2.jpg', '/2.jpg'],
+    imageUrls: ['/contbachhoa2.png', '/2.jpg'],
     inStock: true,
   },
   {
@@ -32,21 +32,7 @@ const products = [
     price: '300.000 VNĐ',
     imageUrls: ['/kho2.jpg', '/2.jpg'],
     inStock: true,
-  },
-  {
-    id: 1,
-    name: 'Container portcon 20FT 5',
-    price: '300.000 VNĐ',
-    imageUrls: ['/2.jpg', '/2.jpg', '/2.jpg'],
-    inStock: true,
-  },
-  {
-    id: 1,
-    name: 'Container portcon 20FT 6',
-    price: '300.000 VNĐ',
-    imageUrls: ['/2.jpg', '/2.jpg'],
-    inStock: true,
-  },
+  }
 ];
 
 // Định nghĩa kiểu cho sản phẩm
