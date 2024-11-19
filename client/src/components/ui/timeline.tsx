@@ -23,7 +23,7 @@ const Timeline = () => {
     {
       time: '4',
       description: 'Doanh nghiệp kinh doanh theo thời vụ',
-      imageUrl: '/kinhdoanhthoivu.jpg',
+      imageUrl: '/thoivu.jpg',
     },
   ];
 

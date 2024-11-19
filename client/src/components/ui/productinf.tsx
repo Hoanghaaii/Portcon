@@ -32,18 +32,18 @@ const ProductDetails = () => {
       content: (
         <>
           <div className=' text-blue-900 text-opacity-75 space-x-8'>
-          <Image src={'/tinhnang.png'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
+          <Image src={'/tinhnang.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
             
             </Image>
             <p className=' mb-4 font-semibold'>Các tính năng nổi bật của sản phẩm bao gồm:</p>
             <ul className=' space-y-4'>
-                <li>Thiết kế chống chịu thời tiết</li>
-                <li>Chống thấm nước và chống động vật hoang dã</li>
-                <li>Lối vào ở tầng trệt</li>
-                <li>Thông số kỹ thuật ISO</li>
-                <li>Sàn chịu tải</li>
-                <li>Có thể tuỳ chỉnh</li>
-                <li>Giao hàng dễ dàng</li>
+                <li>- Thiết kế chống chịu thời tiết</li>
+                <li>- Chống thấm nước và chống động vật hoang dã</li>
+                <li>- Lối vào ở tầng trệt</li>
+                <li>- Thông số kỹ thuật ISO</li>
+                <li>- Sàn chịu tải</li>
+                <li>- Có thể tuỳ chỉnh</li>
+                <li>- Giao hàng dễ dàng</li>
             </ul>
           </div>
         </>
@@ -53,7 +53,7 @@ const ProductDetails = () => {
       title: 'Dịch vụ vận chuyển',
       content: (
         <>
-          <Image src={'/dichvuvanchuyen.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
+          <Image src={'/dichvuvanchuyenn.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
             
           </Image>
           <p className=' text-blue-900'>Chúng tôi sử dụng xe đầu kéo rơ mooc để vận chuyển container. là một loại xe tải có một hoặc nhiều rơ mooc gắn phía sau để vận chuyển hàng hóa. Xe đầu kéo thường có động cơ mạnh mẽ và có thể kéo được nhiều rơ mooc. Rơ mooc thường có kích thước lớn và có thể chứa được nhiều hàng hóa.

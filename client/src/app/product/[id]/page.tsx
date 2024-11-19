@@ -1,13 +1,13 @@
 "use client";
-import React, { useState } from 'react';
-import Image from 'next/image';
-import DropDownPicker from '../../../components/ui/ddpicker';
-import { Button } from '../../../components/ui/button';
-import ProductDetails from '../../../components/ui/productinf';
-import { useRouter } from 'next/navigation';
-import DatePicker from '@/components/ui/datepicker';
-import ProductChiaNgan from '@/components/contchiangan';
-import ImageGrid from '@/components/ui/chianganpicker';
+import React, { useState } from "react";
+import Image from "next/image";
+import DropDownPicker from "../../../components/ui/ddpicker";
+import { Button } from "../../../components/ui/button";
+import ProductDetails from "../../../components/ui/productinf";
+import { useRouter } from "next/navigation";
+import DatePicker from "@/components/ui/datepicker";
+import ProductChiaNgan from "@/components/contchiangan";
+import ImageGrid from "@/components/ui/chianganpicker";
 
 interface ProductDetailProps {
   params: {
@@ -17,40 +17,42 @@ interface ProductDetailProps {
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
   const router = useRouter();
-  const products: { [key: string]: { name: string; inStock: string; imageUrls: string[] } } = {
-    '1': {
+  const products: {
+    [key: string]: { name: string; inStock: string; imageUrls: string[] };
+  } = {
+    "1": {
       name: "Container PORTCON 20FT",
-      inStock: 'true',
-      imageUrls: ["/containerbachhoa1.png", "/1.jpg", "/11.jpg", "/111.jpg"],
+      inStock: "true",
+      imageUrls: ["/containerbachhoa1.png", "/anhbentrongcont.webp", "/anhbentrongcont2.webp"],
     },
-    '2': {
+    "2": {
       name: "Container khô PORTCON 20FT",
-      inStock: 'true',
-      imageUrls: ["/kho1.jpg", "/contkho11.webp"],
+      inStock: "true",
+      imageUrls: ["/kho1.jpg", "/anhbentrongcont.webp", "/anhbentrongcont2.webp"],
     },
-    '3': {
+    "3": {
       name: "Container khô PORTCON 20FT",
-      inStock: 'true',
-      imageUrls: ["/kho2.jpg", "/contkho22.jpg"],
+      inStock: "true",
+      imageUrls: ["/kho2.jpg", "/anhbentrongcont.webp", "/anhbentrongcont2.webp"],
     },
-    '7': {
+    "7": {
       name: "Container PORTCON 40FT",
-      inStock: 'true',
-      imageUrls: ["/chiangan1.png", "/77.jpg", "/777.jpg"],
+      inStock: "true",
+      imageUrls: ["/chiangan1.png", "/contchiangan.png"],
     },
-    '8': {
+    "8": {
       name: "Container khô PORTCON 40FT",
-      inStock: 'true',
-      imageUrls: ["/chiangan2.png", "/contkho111.jpg", "/contkho111.webp"],
+      inStock: "true",
+      imageUrls: ["/chiangan2.png", "/contchiangan.png"],
     },
   };
 
   const product = products[params.id];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [dropdownValue, setDropdownValue] = useState<string>('');
-  const [selectedOption, setSelectedOption] = useState<string>('');
+  const [dropdownValue, setDropdownValue] = useState<string>("");
+  const [selectedOption, setSelectedOption] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<Date | null>(null); // State to manage selected date
-  const [errorMessage, setErrorMessage] = useState<string>(''); // State to manage error message
+  const [errorMessage, setErrorMessage] = useState<string>(""); // State to manage error message
 
   const handleImageChange = (index: number) => {
     setCurrentImageIndex(index);
@@ -70,18 +72,18 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
 
   const handleSubmit = () => {
     // Reset error message
-    setErrorMessage('');
+    setErrorMessage("");
 
     // Check if all fields are filled
     if (!dropdownValue || !selectedOption || !selectedDate) {
-      setErrorMessage('Vui lòng điền đầy đủ thông tin.');
+      setErrorMessage("Vui lòng điền đầy đủ thông tin.");
       return;
     }
 
     const queryParams = new URLSearchParams({
       timerent: dropdownValue,
       location: selectedOption,
-      date: selectedDate ? selectedDate.toISOString() : '', // Format date if selected
+      date: selectedDate ? selectedDate.toISOString() : "", // Format date if selected
       id: params.id, // Thêm ID sản phẩm vào query params
     });
 
@@ -96,8 +98,10 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     <div>
       <div className="flex w-full mb-4 p-8">
         <div className="rounded-3xl shadow-2xl bg-slate-100 max-w-max m-5 pb-5">
-          <h2 className="text-xl font-semibold m-4 mb-20 text-blue-900">{product.name}</h2>
-          <div className='m-6 w-[600px] h-[400px] rounded-3xl mb-10 flex justify-center items-center'>
+          <h2 className="text-xl font-semibold m-4 mb-20 text-blue-900">
+            {product.name}
+          </h2>
+          <div className="m-6 w-[600px] h-[400px] rounded-3xl mb-10 flex justify-center items-center">
             <Image
               src={product.imageUrls[currentImageIndex]}
               alt={`Hình ảnh sản phẩm ${currentImageIndex + 1}`}
@@ -114,33 +118,48 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                   alt={`Thumbnail ${index + 1}`}
                   width={100}
                   height={75}
-                  className={`object-cover rounded-lg ${currentImageIndex === index ? 'border-2 border-blue-900' : ''}`}
+                  className={`object-cover rounded-lg ${
+                    currentImageIndex === index ? "border-2 border-blue-900" : ""
+                  }`}
                 />
               </button>
             ))}
           </div>
-          <div className='ml-2'>
-            <p className={`mt-2 ${product.inStock === 'true' ? 'text-green-600' : 'text-red-600'}`}>
-              {product.inStock === 'true' ? 'Còn hàng' : 'Hết hàng'}
+          <div className="ml-2">
+            <p
+              className={`mt-2 ${
+                product.inStock === "true"
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
+              {product.inStock === "true" ? "Còn hàng" : "Hết hàng"}
             </p>
           </div>
         </div>
 
-        <div className='min-w-[700px] max-h-max pt-5 rounded-3xl shadow-2xl bg-slate-100 max-w-max m-5'>
-          <div className='m-10'>
-            <p className='flex justify-center text-2xl font-semibold text-blue-900'>Nhận báo giá ngay hôm nay!</p>
-            <div className='grid grid-cols-2 gap-4 mt-20'>
+        <div className="min-w-[700px] max-h-max pt-5 rounded-3xl shadow-2xl bg-slate-100 max-w-max m-5">
+          <div className="m-10">
+            <p className="flex justify-center text-2xl font-semibold text-blue-900">
+              Nhận báo giá ngay hôm nay!
+            </p>
+            <div className="grid grid-cols-2 gap-4 mt-20">
               <div>
-                <DatePicker selectedDate={selectedDate} onChange={handleDateChange} />
+                <DatePicker
+                  selectedDate={selectedDate}
+                  onChange={handleDateChange}
+                />
               </div>
               <div>
                 <DropDownPicker onChange={handleDropdownChange} />
               </div>
             </div>
-            <p className='font-semibold mt-10 text-blue-900'>Bạn lưu trữ container ở đâu?</p>
-            <div className='flex ml-5 flex-col'>
-              <div className='flex space-x-5'>
-                <div className='flex items-center'>
+            <p className="font-semibold mt-10 text-blue-900">
+              Bạn lưu trữ container ở đâu?
+            </p>
+            <div className="flex ml-5 flex-col">
+              <div className="flex space-x-5">
+                <div className="flex items-center">
                   <input
                     type="radio"
                     id="option1"
@@ -148,9 +167,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                     value="Vị trí có sẵn của PORTCON"
                     onChange={handleOptionChange}
                   />
-                  <label htmlFor="option1" className='mx-2 text-blue-900'>Vị trí có sẵn của PORTCON</label>
+                  <label
+                    htmlFor="option1"
+                    className="mx-2 text-blue-900"
+                  >
+                    Vị trí có sẵn của PORTCON
+                  </label>
                 </div>
-                <div className='flex items-center'>
+                <div className="flex items-center">
                   <input
                     type="radio"
                     id="option2"
@@ -158,9 +182,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                     value="Vị trí gợi ý"
                     onChange={handleOptionChange}
                   />
-                  <label htmlFor="option2" className='mx-2 text-blue-900'>Vị trí gợi ý</label>
+                  <label
+                    htmlFor="option2"
+                    className="mx-2 text-blue-900"
+                  >
+                    Vị trí gợi ý
+                  </label>
                 </div>
-                <div className='flex items-center'>
+                <div className="flex items-center">
                   <input
                     type="radio"
                     id="option3"
@@ -168,45 +197,64 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                     value="Đã có vị trí đặt kho"
                     onChange={handleOptionChange}
                   />
-                  <label htmlFor="option2" className='mx-2 text-blue-900'>Đã có vị trí đặt kho</label>
+                  <label
+                    htmlFor="option3"
+                    className="mx-2 text-blue-900"
+                  >
+                    Đã có vị trí đặt kho
+                  </label>
                 </div>
               </div>
-              <hr className='m-2'/>
-              <ImageGrid/>
+              <hr className="m-2" />
+              {["7", "8"].includes(params.id) && <ImageGrid />}
             </div>
-            {errorMessage && <p className='text-red-600'>{errorMessage}</p>} {/* Display error message */}
-            <Button className='w-full mt-5 bg-blue-900' onClick={handleSubmit}>
-              Đặt 
+            {errorMessage && (
+              <p className="text-red-600">{errorMessage}</p>
+            )}{" "}
+            {/* Display error message */}
+            <Button className="w-full mt-5 bg-blue-900" onClick={handleSubmit}>
+              Đặt
             </Button>
           </div>
         </div>
       </div>
-      <div className='flex justify-center rounded-3xl p-5 bg-slate-100 mx-5 shadow-lg'>
-  <div className='max-w-5xl flex justify-center space-x-5'>
-  <Image 
-      src={params.id === '1' ? '/thongso20.png' : params.id===  '2' ? '/thongsocontkho20ft.png': params.id===  '3' ? '/thongsocontkho20ft.png' : params.id=== '7' ? '/thongso40.png' : '/thongsocontkho40ft.png'} 
-      alt='thongso' 
-      width={700} 
-      height={700} 
-      className='object-contain '
-    />
-    <Image 
-      src={params.id === '1' ? '/banve.png' : '/banvekythuat.jpg'} 
-      alt='banve' 
-      width={700} 
-      height={700} 
-      className='object-contain '
-    />
-    
-  </div>
+      <div className="flex justify-center rounded-3xl p-5 bg-slate-100 mx-5 shadow-lg">
+        <div className="max-w-5xl flex justify-center space-x-5">
+          <Image
+            src={
+              params.id === "1"
+                ? "/thongso20.png"
+                : params.id === "2"
+                ? "/thongsocontkho20ft.png"
+                : params.id === "3"
+                ? "/thongsocontkho20ft.png"
+                : params.id === "7"
+                ? "/thongso40.png"
+                : "/thongsocontkho40ft.png"
+            }
+            alt="thongso"
+            width={700}
+            height={700}
+            className="object-contain"
+          />
+          <Image
+            src={
+              params.id === "1"
+                ? "/banve.png"
+                : "/banvekythuat.jpg"
+            }
+            alt="banve"
+            width={700}
+            height={700}
+            className="object-contain"
+          />
+        </div>
+      </div>
+      
+      <div className="flex justify-center w-[85%] m-auto bg-slate-100 shadow-xl mt-5 p-4 rounded-lg">
+  {params.id === "1" ? <ProductDetails /> : <ProductChiaNgan />}
 </div>
 
-      <div className='flex justify-center w-full'>
-      <div className='w-full max-w-5xl mx-auto'>
-        {params.id === '1' ? <ProductDetails /> : <ProductChiaNgan />}
-      </div>
-
-      </div>
     </div>
   );
 };
