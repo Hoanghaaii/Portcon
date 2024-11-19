@@ -9,20 +9,13 @@ const ProductDetails = () => {
   // Dữ liệu cho các phần
   const sections = {
     devices: {
-      title: 'Thiết bị',
+      title: 'Bảng giá',
       content: (
         <>
           <div className=' text-blue-900 text-opacity-75 space-y-4'>
-          <Image quality={100} src={'/thietbi.jpeg'} alt='daukeo' width={1000} height={1000} className=' rounded-4xl my-5'>
-            
+          <Image quality={100} src={'/banggia.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-4xl my-5'>
             </Image>
-            <p>Thiết bị bay hơi (còn gọi là thiết bị trao đổi nhiệt) - Hoạt động bằng cách hấp thụ nhiệt từ môi trường lạnh sau đó chuyển hóa thành hơi lạnh. Đây cũng chính là phần trao đổi nhiệt chính của các container lạnh.</p>
-            <p>Thiết bị ngưng tụ (còn gọi là dàn ngưng tụ) - Có tác dụng hóa lỏng chất dung môi sau khi nén trong chu trình làm lạnh, làm mát bằng không khí lưu động. Chính vì thế nên thiết bị ngưng tụ cũng cần được vệ sinh thường xuyên, không để bụi bẩn bám dày và phát huy hiệu quả tối đa khi làm lạnh.</p>
-            <p>Máy nén (hay nén môi chất lạnh): Bộ phận này có nhiệm vụ nén môi chất lạnh từ áp suất thấp lên áp suất cao hơn. Trên thị trường cũng có nhiều loại máy nén khác nhau, tùy vào từng hãng sử dụng (máy nén Piston, máy nén ro-to, máy nén trục vít, máy nén xoắn ốc, máy nén ly tâm).</p>
-            <p>Van tiết lưu có tác dụng làm giảm áp suất, điều chỉnh môi chất lạnh vào thiết bị bay hơi.</p>
-            <p>Hệ ngắt điện tự động sử dụng dòng điện 3 pha (380V).</p>
-            <p>Hệ thống ngắt nhiệt tự động, làm lạnh bằng quạt gió.</p>
-            <p>Trong trường hợp nguồn điện không ổn định, thông qua cảm biến, container lạnh sẽ tự động điều chỉnh để nhiệt độ và độ ẩm trong khoảng luôn ở một trạng thái ổn định.</p>
+            
           </div>
         </>
       ),

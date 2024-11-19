@@ -210,22 +210,26 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
               </div>
               <hr className="m-2" />
               {/* Kiểm tra isShown và hiển thị nội dung tương ứng */}
-        {isShown ? (
-          // Nếu isShown là true, hiển thị ImageGrid
-          ["7", "8"].includes(params.id) && <ImageGrid />
-        ) : (
-          // Nếu isShown là false, hiển thị một hình ảnh
-          <div className="flex justify-center mt-4">
-            <Image
-              src="/map.png"
-              alt="default image"
-              width={600}
-              height={400}
-              className="rounded-lg"
-              onClick={handleToggle}
-            />
-          </div>
-        )}
+              {["7", "8"].includes(params.id) && (
+        <div>
+          {isShown ? (
+            // Nếu isShown là true, hiển thị ImageGrid
+            <ImageGrid />
+          ) : (
+            // Nếu isShown là false, hiển thị một hình ảnh
+            <div className="flex justify-center mt-4">
+              <Image
+                src="/map.png"
+                alt="default image"
+                width={600}
+                height={400}
+                className="rounded-lg"
+                onClick={handleToggle} // Khi nhấn vào ảnh, chuyển trạng thái toggle
+              />
+            </div>
+          )}
+        </div>
+      )}
             </div>
             {errorMessage && (
               <p className="text-red-600">{errorMessage}</p>

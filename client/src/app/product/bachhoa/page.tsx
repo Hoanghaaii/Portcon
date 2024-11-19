@@ -14,7 +14,7 @@ const products = [
   },
   {
     id: 1,
-    name: 'Container portcon 20FT 2',
+    name: 'Container portcon 40FT 2',
     price: '200.000 VNĐ',
     imageUrls: ['/contbachhoa2.png', '/2.jpg'],
     inStock: true,

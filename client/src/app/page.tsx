@@ -20,8 +20,8 @@ export default function Home() {
           <div>
             <p className="text-6xl font-bold whitespace-nowrap m-3">Chúng Tôi Ở Khắp Mọi Nơi</p>
             <div className="mt-16">
-              <Button className="text-white p-7 m-4 bg-blue-900 font-bold">Tìm hiểu thêm</Button>
-              <Button className="text-white p-7 m-4 bg-blue-900 font-bold">Nhận báo giá</Button>
+              <Button className="bg-white p-7 m-4 hover:text-white text-blue-900 font-bold">Tìm hiểu thêm</Button>
+              <Button className="bg-white p-7 m-4 hover:text-white text-blue-900 font-bold">Nhận báo giá</Button>
             </div>
           </div>
         </div>
