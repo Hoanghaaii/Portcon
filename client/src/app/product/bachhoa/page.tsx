@@ -13,7 +13,7 @@ const products = [
     inStock: true,
   },
   {
-    id: 1,
+    id: 3,
     name: 'Container portcon 40FT 2',
     price: '200.000 VNĐ',
     imageUrls: ['/contbachhoa2.png', '/2.jpg'],
@@ -21,14 +21,14 @@ const products = [
   },
   {
     id: 2,
-    name: 'Container portcon khô 20FT 3',
+    name: 'Container portcon 20FT 3',
     price: '150.000 VNĐ',
     imageUrls: ['/kho1.jpg'],
     inStock: true,
   },
   {
     id: 3,
-    name: 'Container portcon khô 20FT 4',
+    name: 'Container portcon 40FT 4',
     price: '300.000 VNĐ',
     imageUrls: ['/kho2.jpg', '/2.jpg'],
     inStock: true,
@@ -47,7 +47,7 @@ const Page: React.FC = () => {
   
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4 text-center text-blue-900">Danh Sách Cont Bách Hoá</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center text-blue-900">Danh Sách Container Bách Hoá</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {products.map((product) => (
           <div

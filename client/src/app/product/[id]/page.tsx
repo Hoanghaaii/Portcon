@@ -31,9 +31,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
       imageUrls: ["/kho1.jpg", "/anhbentrongcont.webp", "/anhbentrongcont2.webp"],
     },
     "3": {
-      name: "Container khô PORTCON 20FT",
+      name: "Container khô PORTCON 40FT",
       inStock: "true",
-      imageUrls: ["/kho2.jpg", "/anhbentrongcont.webp", "/anhbentrongcont2.webp"],
+      imageUrls: ["/contbachhoa2.png", "/anhbentrongcont.webp", "/anhbentrongcont2.webp"],
     },
     "7": {
       name: "Container PORTCON 40FT",

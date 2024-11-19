@@ -21,14 +21,14 @@ const products = [
   },
   {
     id: 8,
-    name: 'Container khô portcon 3',
+    name: 'Container portcon 3',
     price: '150.000 VNĐ',
     imageUrls: ['/chiangan3.png'],
     inStock: true,
   },
   {
     id: 8,
-    name: 'Container khô portcon 4',
+    name: 'Container portcon 4',
     price: '300.000 VNĐ',
     imageUrls: ['/chiangan4.png', '/pageImg.jpg'],
     inStock: true,
@@ -47,7 +47,7 @@ const Page: React.FC = () => {
   
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4 text-center text-blue-900">Danh Sách Cont Chia Ngăn</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center text-blue-900">Danh Sách Container Chia Ngăn</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {products.map((product) => (
           <div
