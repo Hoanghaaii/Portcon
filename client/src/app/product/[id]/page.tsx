@@ -38,12 +38,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     "7": {
       name: "Container PORTCON 40FT",
       inStock: "true",
-      imageUrls: ["/chiangan1.png", "/contchiangan.png"],
+      imageUrls: ["/chiangan1.png", "/contchiangann.jpg"],
     },
     "8": {
       name: "Container khô PORTCON 40FT",
       inStock: "true",
-      imageUrls: ["/chiangan2.png", "/contchiangan.png"],
+      imageUrls: ["/chiangan2.png", "/contchiangann.jpg"],
     },
   };
 
@@ -53,7 +53,10 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [selectedDate, setSelectedDate] = useState<Date | null>(null); // State to manage selected date
   const [errorMessage, setErrorMessage] = useState<string>(""); // State to manage error message
-
+  const [isShown, setIsShown] = useState<boolean>(false)
+  const handleToggle = () => {
+    setIsShown((prev) => !prev); // Chuyển đổi giá trị của isShown
+  };
   const handleImageChange = (index: number) => {
     setCurrentImageIndex(index);
   };
@@ -206,7 +209,23 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                 </div>
               </div>
               <hr className="m-2" />
-              {["7", "8"].includes(params.id) && <ImageGrid />}
+              {/* Kiểm tra isShown và hiển thị nội dung tương ứng */}
+        {isShown ? (
+          // Nếu isShown là true, hiển thị ImageGrid
+          ["7", "8"].includes(params.id) && <ImageGrid />
+        ) : (
+          // Nếu isShown là false, hiển thị một hình ảnh
+          <div className="flex justify-center mt-4">
+            <Image
+              src="/map.png"
+              alt="default image"
+              width={600}
+              height={400}
+              className="rounded-lg"
+              onClick={handleToggle}
+            />
+          </div>
+        )}
             </div>
             {errorMessage && (
               <p className="text-red-600">{errorMessage}</p>
@@ -250,11 +269,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
           />
         </div>
       </div>
-      
       <div className="flex justify-center w-[85%] m-auto bg-slate-100 shadow-xl mt-5 p-4 rounded-lg">
-  {params.id === "1" ? <ProductDetails /> : <ProductChiaNgan />}
-</div>
-
+        {params.id === "1" ? <ProductDetails /> : <ProductChiaNgan />}
+      </div>
     </div>
   );
 };
