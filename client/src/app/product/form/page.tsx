@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import emailjs from 'emailjs-com'; // Import emailjs
@@ -9,6 +9,7 @@ const Form: React.FC = () => {
   const [timerent, setTimerent] = useState<string | null>(null);
   const [location, setLocation] = useState<string | null>(null);
   const [productId, setProductId] = useState<string | null>(null);
+  const [price, setPrice] = useState<number | null>(null);
 
   // Trạng thái cho thông tin khách hàng
   const [customerName, setCustomerName] = useState<string>('');
@@ -24,6 +25,45 @@ const Form: React.FC = () => {
     setLocation(currentUrl.searchParams.get('location'));
     setProductId(currentUrl.searchParams.get('id'));
   }, []); // Lắng nghe sự thay đổi của URL
+
+  useEffect(() => {
+    if (timerent && productId) {
+      const months = parseInt(timerent.replace(/\D/g, ''), 10); // Extract number from timerent
+      if (!isNaN(months)) {
+        let unitPrice = 0;
+        let discount = 0;
+
+        // Xác định đơn giá và mức giảm dựa trên ID sản phẩm
+        if (productId === "1" || productId === "2") {
+          unitPrice = 3300000;
+          if (months >= 6) {
+            discount = 0.10; // Giảm 10% nếu thuê từ 6 tháng
+          } else if (months >= 3) {
+            discount = 0.05; // Giảm 5% nếu thuê từ 3 tháng
+          }
+        } else if (productId === "3") {
+          unitPrice = 4300000;
+          if (months >= 6) {
+            discount = 0.10; // Giảm 10% nếu thuê từ 6 tháng
+          } else if (months >= 3) {
+            discount = 0.05; // Giảm 5% nếu thuê từ 3 tháng
+          }
+        } else if (productId === "7" || productId === "8") {
+          unitPrice = 1100000;
+          if (months >= 12) {
+            discount = 0.10; // Giảm 10% nếu thuê từ 12 tháng
+          } else if (months >= 6) {
+            discount = 0.05; // Giảm 5% nếu thuê từ 6 tháng
+          }
+        }
+
+        const finalPrice = unitPrice * months * (1 - discount); // Tính giá cuối cùng
+        setPrice(finalPrice);
+      } else {
+        setPrice(null); // Nếu không phải số hợp lệ, không tính giá
+      }
+    }
+  }, [timerent, productId]); // Cập nhật khi timerent hoặc productId thay đổi
 
   // Xử lý gửi form
   const handleSubmit = (e: React.FormEvent) => {
@@ -107,6 +147,12 @@ const Form: React.FC = () => {
                     readOnly
                     className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
+                </div>
+                <div className="mt-4">
+                  <label className="block font-semibold mb-2">Giá tiền:</label>
+                  <p className="text-lg font-bold text-blue-900">
+                    {price !== null ? `${price.toLocaleString()} VND` : 'Không xác định'}
+                  </p>
                 </div>
               </div>
 

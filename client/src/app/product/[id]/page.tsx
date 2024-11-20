@@ -76,7 +76,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
   const handleSubmit = () => {
     // Reset error message
     setErrorMessage("");
-
+    console.log("Selected Date:", selectedDate);
     // Check if all fields are filled
     if (!dropdownValue || !selectedOption || !selectedDate) {
       setErrorMessage("Vui lòng điền đầy đủ thông tin.");
