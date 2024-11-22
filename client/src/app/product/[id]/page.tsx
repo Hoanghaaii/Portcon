@@ -38,12 +38,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
     "7": {
       name: "Container PORTCON 40FT",
       inStock: "true",
-      imageUrls: ["/chiangan1.png", "/contchiangann.jpg"],
+      imageUrls: ["/chiangan1.png", "/contchiangan.jpg"],
     },
     "8": {
       name: "Container khô PORTCON 40FT",
       inStock: "true",
-      imageUrls: ["/chiangan2.png", "/contchiangann.jpg"],
+      imageUrls: ["/chiangan2.png", "/contchiangan.jpg"],
     },
   };
 
