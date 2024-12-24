@@ -209,27 +209,6 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
                 </div>
               </div>
               <hr className="m-2" />
-              {/* Kiểm tra isShown và hiển thị nội dung tương ứng */}
-              {["7", "8"].includes(params.id) && (
-        <div>
-          {isShown ? (
-            // Nếu isShown là true, hiển thị ImageGrid
-            <ImageGrid />
-          ) : (
-            // Nếu isShown là false, hiển thị một hình ảnh
-            <div className="flex justify-center mt-4">
-              <Image
-                src="/map.png"
-                alt="default image"
-                width={600}
-                height={400}
-                className="rounded-lg"
-                onClick={handleToggle} // Khi nhấn vào ảnh, chuyển trạng thái toggle
-              />
-            </div>
-          )}
-        </div>
-      )}
             </div>
             {errorMessage && (
               <p className="text-red-600">{errorMessage}</p>
@@ -264,7 +243,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ params }) => {
             src={
               params.id === "1"
                 ? "/banve.png"
-                : "/banvekythuat.jpg"
+                : "/banvee.png"
             }
             alt="banve"
             width={700}

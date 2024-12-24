@@ -25,7 +25,7 @@ const ProductDetails = () => {
       content: (
         <>
           <div className=' text-blue-900 text-opacity-75 space-x-8'>
-          <Image src={'/tinhnang.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
+          <Image src={'/tinhnangg.png'} alt='daukeo' width={1000} height={1000} className=' rounded-3xl my-5'>
             
             </Image>
             <p className=' mb-4 font-semibold'>Các tính năng nổi bật của sản phẩm bao gồm:</p>
