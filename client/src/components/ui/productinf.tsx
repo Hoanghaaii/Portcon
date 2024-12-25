@@ -13,7 +13,7 @@ const ProductDetails = () => {
       content: (
         <>
           <div className=' text-blue-900 text-opacity-75 space-y-4'>
-          <Image quality={100} src={'/banggia.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-4xl my-5'>
+          <Image quality={100} src={'/banggiaa.jpg'} alt='daukeo' width={1000} height={1000} className=' rounded-4xl my-5'>
             </Image>
             
           </div>

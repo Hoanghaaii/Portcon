@@ -5,7 +5,6 @@ import "./globals.css";
  // Đường dẫn có thể khác nhau tùy vào cấu trúc thư mục
 import Header from "../components/ui/header"
 import Footer from "../components/ui/footer"
-import {MyBreadcrumb} from "../components/ui/hisline";
 
 
 const geistSans = localFont({
@@ -35,7 +34,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header/>
-        <MyBreadcrumb/>
         {children}
         <Footer/>
       </body>
